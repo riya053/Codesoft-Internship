@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num,guess;
+   
+    num=rand()%100;
+
+    cout<<"Now  lets's start the number guessing game....\n";
+    
+     do {
+	  cout<<"Guess my number: ";
+	  cin>>guess;
+	  
+	  if(guess==num) {
+		 cout<<"WOOHOOOO....Correct number!!!";
+		  break;
+	  }
+		  else if(guess>num) {
+			  cout<<"Your number is too large  \n\n";
+		  }
+		  else {
+			  cout<<"Your number is too small  \n\n";
+		  }
+  }while(guess>=0);
+    
+  		cout<<"My number was:  \n ";
+  		cout<<num;
+
+        return 0;
+	}
