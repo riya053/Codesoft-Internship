@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    string name;
+    float marks[5],sum=0,avg;
+    int i;
+    cout<<"Enter the name of student :\n";
+    cin>>name;
+    cout<<"Enter the marks of student in 5 subjects: ";
+    for(int i=0;i<5;i++)
+    {
+        cin>>marks[i];
+        sum=sum+marks[i];
+    }
+    cout<<"the sum is "<<sum<<endl;
+
+    avg=sum/5;
+    cout<<"Grade of the student is = \n";
+    if(avg>=91 && avg<=100)
+        cout<<"A1";
+    else if(avg>=81 && avg<91)
+        cout<<"A2";
+    else if(avg>=71 && avg<81)
+        cout<<"B1";
+    else if(avg>=61 && avg<71)
+        cout<<"B2";
+    else if(avg>=51 && avg<61)
+        cout<<"C1";
+    else if(avg>=41 && avg<51)
+        cout<<"C2";
+    else if(avg>=33 && avg<41)
+        cout<<"D";
+    else if(avg>=21 && avg<33)
+        cout<<"E1";
+    else if(avg>=0 && avg<21)
+        cout<<"E2";
+    else
+        cout<<"Invalid!";
+    cout<<endl;
+    return 0;
+}
